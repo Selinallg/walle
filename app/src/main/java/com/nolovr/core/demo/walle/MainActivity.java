@@ -1,9 +1,12 @@
 package com.nolovr.core.demo.walle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
+import android.content.pm.FeatureInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,11 +14,29 @@ import com.meituan.android.walle.WalleChannelReader;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
     private TextView tv_read;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        try {
+            String        packageName = getPackageName();
+            PackageInfo   p = getPackageManager().getPackageInfo(packageName, PackageManager.GET_CONFIGURATIONS);
+            FeatureInfo[] f = p.reqFeatures;
+            for (int i = 0; i < f.length; i++) {
+                Log.d(TAG, "--------onCreate: "+f[0].name);
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        boolean b = getPackageManager().hasSystemFeature("com.cmcc.vr.mode");
+
+        Log.d(TAG, "onCreate: ===="+b);
 
         tv_read = findViewById(R.id.tv_read);
         findViewById(R.id.button_read).setOnClickListener(new View.OnClickListener() {

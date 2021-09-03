@@ -58,3 +58,12 @@ java -jar walle-cli-all.jar put -c nolo  app\build\outputs\channels\app-com.nolo
 写入额外信息，不提供渠道时不写入渠道
 
 java -jar walle-cli-all.jar put -c nolo -e msg=xxxxxxx  app\build\outputs\channels\app-com.nolo.testwalle.myapplication-nolo-release-v1.0-1-20210805-114003.apk
+
+
+=============
+
+java -jar walle-cli-all.jar put -c nolo -e msg=xxxxx D:\work\androidWorkspace\sonic\GSXR-Walle\walle\app\build\outputs\apk\debug\a
+pp-debug.apk
+========生成 app-debug_nolo.apk===
+
+java -jar walle-cli-all.jar show D:\work\androidWorkspace\sonic\GSXR-Walle\walle\app\build\outputs\apk\debug\app-debug_nolo.apk
