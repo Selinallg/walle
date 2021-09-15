@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import com.meituan.android.walle.WalleChannelReader;
 
 public class MainActivity extends AppCompatActivity {
