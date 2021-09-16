@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 tv_read.setText("渠道：" + channel + "   获取额外信息  " + msg);
             }
         });
+
+        CommandExecution.CommandResult result = CommandExecution.execCommand("ls", false);
+        Log.d(TAG, "onCreate: result="+result.result);
+        Log.d(TAG, "onCreate: result="+result.errorMsg);
+        Log.d(TAG, "onCreate: result="+result.successMsg);
     }
 
     public static String getChannel(Context context) {
