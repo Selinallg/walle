@@ -47,10 +47,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        CommandExecution.CommandResult result = CommandExecution.execCommand("ls", false);
+        //String cmd = "am start -n com.nolovr.nolohome.core/.SplashActivity";
+        String cmd = "pwd";
+        CommandExecution.CommandResult result = CommandExecution.execCommand(cmd, false);
+
         Log.d(TAG, "onCreate: result="+result.result);
         Log.d(TAG, "onCreate: result="+result.errorMsg);
         Log.d(TAG, "onCreate: result="+result.successMsg);
+
+//        cmd = "ls";
+//        CommandExecution.CommandResult result2 = CommandExecution.execCommand(cmd, false);
+//
+//        Log.d(TAG, "onCreate: result="+result2.result);
+//        Log.d(TAG, "onCreate: result="+result2.errorMsg);
+//        Log.d(TAG, "onCreate: result="+result2.successMsg);
     }
 
     public static String getChannel(Context context) {
