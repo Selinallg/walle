@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //String cmd = "am start -n com.nolovr.nolohome.core/.SplashActivity";
-        String cmd = "pwd";
+        String cmd = "ps -A";
         CommandExecution.CommandResult result = CommandExecution.execCommand(cmd, false);
 
         Log.d(TAG, "onCreate: result="+result.result);
