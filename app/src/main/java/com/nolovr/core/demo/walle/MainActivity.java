@@ -47,9 +47,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //String cmd = "am start -n com.nolovr.nolohome.core/.SplashActivity";
-        String cmd = "ps -A";
+//        String cmd = "am start -n com.nolovr.nolohome.core/.SplashActivity";
+//        String cmd = "ps -A";
+//        String cmd = "root";
+//        String cmd = "pm disable com.nolovr.nolohome.core";
+//        String cmd = "pm enable com.nolovr.nolohome.core";
+//        String cmd = "am force-stop com.nolovr.nolohome.core";
+//        String cmd = "am force-stop com.nolovr.nolohome.core";
+
+
+
+//        String cmd = "app_process -Djava.class.path=/data/local/tmp/classes.dex /system/bin shellService.Main";
+
+
+//        String cmd = "am kill com.nolovr.nolohome.core";
+//        String cmd = "kill -9 2060";
+
+
+        String cmd = "pm install -r -t /sdcard/CloudVR-Client-debug.apk";
+//        String cmd = "pm install /sdcard/CloudVR-Client-debug.apk";
+//        String cmd = "pm install CloudVR-Client-debug.apk";
+//        String cmd = "pm uninstall com.nolovr.core.cloudvr.client";
         CommandExecution.CommandResult result = CommandExecution.execCommand(cmd, false);
+
 
         Log.d(TAG, "onCreate: result="+result.result);
         Log.d(TAG, "onCreate: result="+result.errorMsg);
