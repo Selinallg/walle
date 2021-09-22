@@ -66,6 +66,7 @@ dependencies {
 
 
     implementation files('libs\\channel.jar')
+    implementation files('libs\\channel-operater.jar')
 
 
 }
