@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        if (true){
+            return;
+        }
+
 //        String cmd = "am start -n com.nolovr.nolohome.core/.SplashActivity";
 //        String cmd = "ps -A";
 //        String cmd = "root";
